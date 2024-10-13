@@ -9,15 +9,31 @@
     <h3>Create And Connect with EC2 Instance</h3>
     <ol>
         <li>Login to the AWS console</li>
-        <li>Go to EC2 ->Launch Ec2 instance ->add .pemfile ->ok</li>
+        <li>Go to EC2 ->Launch Ec2 instance ->
+            Give a name to Ec2 Instance </li>
+        <li> select Application and OS Images ->type of OS</li>
+        <li>Select Instance type -> cpu memory</li>
+        <li>Key pair
+            <ol>Create a new Key Pair
+                <li>Give KeyPairName </li>
+                <li>Key Pair Type : RSA</li>
+                <li>Private Key File Format : .pem -> use with open ssh</li>
+                <li>Create key Pair</li>
+            </ol>
+        </li>
+        <li>Allow SSH traffic from anywhere</li>
+        <li>Select number of instances</li>
+        <li>Launch EC2 instance</li>
+        </li>
         <li>Ec2 Instance is created</li>
-        <li>Connect with ec2 instance with SSH
+        <li>Connect with EC2 instance with SSH
             <ol>SSH is a network protocol that provides a secure way to access a remote server. It’s widely used for managing systems and applications remotely
                 <li>go to the teriminal</li>
-                <li>Set Permissions for Your Key File ie .PEM file <b>chmod 400 /path/to/your-key.pem</b></li>
+                <li>Set Permissions for Your Key File ie .PEM file <b>chmod 600 /path/to/your-key.pem</b></li>
                 <li>Connect Using SSH <b>ssh -i .pem fileLocation ubuntu@ipAddress</b></li>
                 <li>Verify the Connection :If the connection is successful, you’ll be logged into your EC2 instance. You can now manage and configure your instance as needed.</li>
             </ol>
+            <li>update the os with <b>sudo apt update</b></li>
 
         </li>
     </ol>
