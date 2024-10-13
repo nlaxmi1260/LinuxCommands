@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create And Connect with EC2 Instance</title>
+</head>
+<body>
+    <h3>Create And Connect with EC2 Instance</h3>
+    <ol>
+        <li>Login to the AWS console</li>
+        <li>Go to EC2 ->Launch Ec2 instance ->add .pemfile ->ok</li>
+        <li>Ec2 Instance is created</li>
+        <li>Connect with ec2 instance with SSH
+            <ol>SSH is a network protocol that provides a secure way to access a remote server. It’s widely used for managing systems and applications remotely
+                <li>go to the teriminal</li>
+                <li>Set Permissions for Your Key File ie .PEM file <b>chmod 400 /path/to/your-key.pem</b></li>
+                <li>Connect Using SSH <b>ssh -i .pem fileLocation ubuntu@ipAddress</b></li>
+                <li>Verify the Connection :If the connection is successful, you’ll be logged into your EC2 instance. You can now manage and configure your instance as needed.</li>
+            </ol>
+
+        </li>
+    </ol>
+</body>
+</html>
