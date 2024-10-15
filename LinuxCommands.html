@@ -56,7 +56,9 @@
         </li>
         <li>File Permissions and Ownership
             <ol>
-                <li><b>chmod:</b> Change file permissions.
+                <li><code>stat fileName.txt</code>: The ‘stat’ command is used to display detailed information about files and file systems, including attributes like file size, permissions, ownership, timestamps, and more in the current directory.</li>
+                <li><code>ls -l</code>: To view the permissions of each file and directories in the current directory.</li>
+                <li><code>chmod</code>: Change file permissions.
                 <ul>
                     <li><code>chmod 754 fileName.txt</code>: Owner can read/write/execute, others can read/execute, group can read</li>
                     <li><code>chmod +x file.sh </code>: Make file executable</li>
@@ -69,9 +71,11 @@
                     </ol>
                 </li>
                 <li><code>chgrp </code>: Change group Ownership
-                    <ol>
-                        <li> <code>chgrp group_name file.txt</code>
-                        </li>
+                    <ol>The `chgrp` command in Linux is used to change the group ownership of a file or directory. All files in Linux belong to an owner and a group. You can set the owner by using “chown” command, and the group by the “chgrp” command.
+                        <li><code>chgrp [OPTION]… GROUP FILE…</code>: First we need to have administrator permission to add or delete groups. We can login as root for this purpose or use sudo. </li>
+                        <li><code>sudo addgroup groupName </code>: To add a new group</li>
+                        <li><code>sudo chgrp groupName abc.txt</code>: To change the group ownership of a file.</li>
+                        <li><code>chgrp developers file1.txt file2.txt file3.txt</code>: The ‘chgrp’ command can also handle multiple files at once</li>
                     </ol>
                 </li>
                 </li>
