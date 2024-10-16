@@ -81,6 +81,46 @@
                 </li>
             </ol>
         </li>
+        <li>TextFile Operations
+            <ol>
+                <li><code>To Create a file</code>:
+                <ul>
+                    <li>touch filename.txt</li>
+                    <li>vi filename.txt</li>
+                    <li>> filename.txt</li>
+                </ul>
+                </li>
+                <li><code>cat filename</code>: Display file content</li>
+                <li><code>clear</code>: To clear the teriminal</li>
+                <li><code>tail fileName.txt</code>: Display the last lines of a file</li>
+                <li><code>tail -F BigFile.txt</code></li>
+                <li><code>tail -n 4 BigFile.txt</code></li>
+                <li><code>tail -4 BigFile.txt</code></li>
+                <li><code>tail BigFile.txt naga.txt</code></li>
+                <li><code>head fileName.txt</code>: Display the first lines of a file</li>
+                <li><code>less fileName.txt</code>:  View large files one page at a time</li>
+                <li>grep: Search text using patterns
+                    <ul>
+                        <li><code>grep "man" BigFile.txt</code></li>
+                        <li><code>grep "is " awk.txt</code></li>
+                    </ul>
+                </li>
+                <li><b>sed </b>: Stream editor, used for searching, replacing text while displaying but not in the file content
+                    <ul>
+                        <li><code> sed 's/old/new/g' file.txt</code></li>
+                        <li><code> sed 's/gagan/gagana Sindhu/g' naga.txt</code></li>
+                    </ul>
+                </li>
+                <li><b>awk </b>: Text processing and reporting
+                    <ul>
+                        <li>awk '{print $1}' naga.txt</li>
+                        <li>awk '{print $1, $2}' awk.txt</li>
+                        <li><code> awk '{print $NF}' awk.txt</code></li>
+                    </ul>
+                </li>
+                <li><b>history > history1.txt </b> : to print history content in history1 text file.</li>
+            </ol>
+        </li>
     </ol>
 </body>
 </html>
