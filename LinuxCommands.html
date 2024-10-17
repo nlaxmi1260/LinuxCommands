@@ -121,6 +121,25 @@
                 <li><b>history > history1.txt </b> : to print history content in history1 text file.</li>
             </ol>
         </li>
+        <li>Process Management
+            <ul>
+                <li><code>ps</code>: To display list of processes</li>
+                <li><code>ps -ef | grep process_name </code>:  # Find a specific process.</li>
+                <li><code>top  </code>:# View system processes and resource usage</li>
+                <li><code>kill</code> : Terminate processes by PID.
+                <ul>
+                    <li><code>kill PID </code>:  # Send termination signal to a process
+                    </li>
+                    <li><code>kill -9 PID </code>: # Force kill a process</li>
+                    <li><code>pkill -f process_name</code> :Kill processes by name.</li>
+                </ul>
+                <li><code>systemctl </code>: Start, stop, enable, or check status of services</li>
+                <li><code>systemctl start nginx</code></li>
+                </li>
+                <li><code>service </code>: Manage system services</li>
+                <li><code>service nginx restart</code></li>
+            </ul>
+        </li>
     </ol>
 </body>
 </html>
