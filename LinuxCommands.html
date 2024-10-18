@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linux Commands</title>
+    <link rel="stylesheet" href="Styles/Style.css">
 </head>
 <body>
     <h1>Linux Commands</h1>
-    <p>As a DevOps engineer, having a strong grasp of Linux commands is crucial for system administration, automation, troubleshooting, and configuring servers. Here is a comprehensive set of Linux commands that you need to master, categorized based on their use cases:
+    <p>As a DevOps engineer, having a strong grasp of Linux commands is crucial for <b>system administration, automation, troubleshooting, and configuring servers </b>. Here is a comprehensive set of Linux commands that you need to master, categorized based on their use cases:
      <br>
     <a href="Create&ConnectEc2.html"> Create And Connect with EC2 instance through SSH </a>
     </p>
@@ -27,111 +28,170 @@
                     <li><code>find  / -name "*.log"</code>: Search for files and directories</li>
                     <li><code>du -h --max-depth=1</code>: Disk usage of files and directories.</li>
                     <li><code>df -h</code>: Show disk space usage of different applications.</li>
+                    <li><code> cp file.txt /new/path/ </code> : copy files</li>
+                        <li><code> cp -r /path/to/source /path/to/destination</code> :Copy directories recursively</li>
+                        <li><code>mv oldFile.txt newFile.txt</code>: Move or rename a file along with its content..</li>
+                        <li><code>mv /path/to/file /new/path </code> : move directory.</li>
                     <li>Mount:When and why to use it 
-                        <p>
-                            The mount command is utilized when you need to access files or directories from a device (like a hard drive, CD-ROM, or network location) on your system. It's especially useful for accessing partitions on a hard disk, external storage devices, or file systems on remote machines.
-                            <br>
-                            To use mount, you typically need to provide the device identifier and the mount point.
-                            <code>  mount /dev/sda1 /mnt/mydisk </code>
-                        </p>
+                        <ul>
+                            <li>The mount command is utilized when you need to access files or directories from a device (like a hard drive, CD-ROM, or network location) on your system.
+                            </li>
+                            <li>
+                                It's especially useful for accessing partitions on a hard disk, external storage devices, or file systems on remote machines.
+                            </li>
+                            <li>
+                                To use mount, you typically need to provide the device identifier and the mount point.
+                                <code>  mount /dev/sda1 /mnt/mydisk </code>
+                            </li>
+                            <li><code>unmount /mnt</code></li>
+                        </ul>
                     </li>
-                    <li><code>unmount /mnt</code></li>
                 </ul>
                 </li>
-                <li><code>mkdir dirname</code>: To create a Directory
+                <li><code>mkdir dirname </code> : To create a Directory
                     <ul>
                         <li>
                             <code>  mkdir -p /path/to/new_dir </code>: Create parent directories if they don’t exist i.e create a directory in particular location
                         </li>
                         <li>
-                            <code>cd /path/to/directory</code>: To go that directory.
+                            <code>cd /path/to/directory </code> : To go that directory.
                         </li>
                         <li>
-                            <code>cd ~</code>: Go to home directory 
+                            <code>cd ~ </code> :Go to home directory 
                         </li>
                         <li>
-                            <code>pwd</code>: Print working directory (current location).
+                            <code> pwd </code> : Print working directory (current location).
                         </li>
                         <li>
                             <code>rm -rf /path/to/directory</code>: Remove directory and its contents recursively.
                         </li>
-                        <li><code>cp file.txt /new/path/</code>: copy files</li>
-                        <li><code>cp -r /path/to/source /path/to/destination</code>: Copy directories recursively</li>
-                        <li><code>mv oldFile.txt newFile.txt</code>: Move or rename a file along with its content..</li>
-                        <li><code>mv /path/to/file /new/path</code>: move directory.</li>
+                        
                     </ul>
                 </li>
             </ol>
         </li>
         <li>File Permissions and Ownership
             <ol>
-                <li><code>stat fileName.txt</code>: The ‘stat’ command is used to display detailed information about files and file systems, including attributes like file size, permissions, ownership, timestamps, and more in the current directory.</li>
-                <li><code>ls -l</code>: To view the permissions of each file and directories in the current directory.</li>
-                <li><code>chmod</code>: Change file permissions.
-                <ul>
-                    <li><code>chmod 754 fileName.txt</code>: Owner can read/write/execute, others can read/execute, group can read</li>
-                    <li><code>chmod +x file.sh </code>: Make file executable</li>
-                    <li><code>chmod 444</code>: Read/Write/Execute owner others and group</li>
-                </ul>
-                <li><code>chown</code>: Change file Ownership
-                    <ol>
-                        <li><code>chown user:group file.txt</code>: Change ownership of file</li>
-                        <li><code>chown -R user:group /path</code>: Change ownership recursively</li>
-                    </ol>
+                <li>
+                    <code>stat fileName.txt</code> : The ‘stat’ command is used to display detailed information about files and file systems, including attributes like file size, permissions, ownership, timestamps, and more in the current directory.
                 </li>
-                <li><code>chgrp </code>: Change group Ownership
-                    <ol>The `chgrp` command in Linux is used to change the group ownership of a file or directory. All files in Linux belong to an owner and a group. You can set the owner by using “chown” command, and the group by the “chgrp” command.
-                        <li><code>chgrp [OPTION]… GROUP FILE…</code>: First we need to have administrator permission to add or delete groups. We can login as root for this purpose or use sudo. </li>
-                        <li><code>sudo addgroup groupName </code>: To add a new group</li>
-                        <li><code>sudo chgrp groupName abc.txt</code>: To change the group ownership of a file.</li>
-                        <li><code>chgrp developers file1.txt file2.txt file3.txt</code>: The ‘chgrp’ command can also handle multiple files at once</li>
-                    </ol>
+                <li>
+                    <code>ls -l</code>: To view the permissions of each file and directories in the current directory.
+                </li>
+                <li>
+                    <code>chmod</code>: Change file permissions.
+                    <ul>
+                        <li>
+                            <code>chmod 754 fileName.txt</code>: Owner can read/write/execute, others can read/execute, group can read.
+                        </li>
+                        <li>
+                            <code>chmod +x file.sh </code>: Make file executable.
+                        </li>
+                        <li>
+                            <code>chmod 444</code>: Read/Write/Execute owner others and group.
+                        </li>
+                    </ul>
+                <li><code>chown</code>: Change file Ownership
+                    <ul>
+                        <li>
+                            <code>chown user:group file.txt</code>: Change ownership of file.
+                        </li>
+                        <li>
+                            <code>chown -R user:group /path</code>: Change ownership recursively.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <code>chgrp </code>: Change group Ownership
+                    <ul>The `chgrp` command in Linux is used to change the group ownership of a file or directory. All files in Linux belong to an owner and a group. You can set the owner by using “chown” command, and the group by the “chgrp” command.
+                        <li>
+                            <code>chgrp [OPTION]… GROUP FILE…</code>: First we need to have administrator permission to add or delete groups. We can login as root for this purpose or use sudo.
+                         </li>
+                        <li>
+                            <code>sudo addgroup groupName </code>: To add a new group
+                        </li>
+                        <li>
+                            <code>sudo chgrp groupName abc.txt</code>: To change the group ownership of a file.
+                        </li>
+                        <li>
+                            <code>chgrp developers file1.txt file2.txt file3.txt</code>: The ‘chgrp’ command can also handle multiple files at once.
+                        </li>
+                    </ul>
                 </li>
                 </li>
             </ol>
         </li>
         <li>TextFile Operations
             <ol>
-                <li><code>To Create a file</code>:
-                <ul>
-                    <li>touch filename.txt</li>
-                    <li>vi filename.txt</li>
-                    <li>> filename.txt</li>
-                </ul>
+                <li>
+                    <code>To Create a file </code>:
+                        <ul>
+                            <li>touch filename.txt</li>
+                            <li>vi filename.txt</li>
+                            <li> > filename.txt</li>
+                        </ul>
                 </li>
-                <li><code>cat filename</code>: Display file content</li>
-                <li><code>clear</code>: To clear the teriminal</li>
-                <li><code>tail fileName.txt</code>: Display the last lines of a file</li>
-                <li><code>tail -F BigFile.txt</code></li>
-                <li><code>tail -n 4 BigFile.txt</code></li>
-                <li><code>tail -4 BigFile.txt</code></li>
-                <li><code>tail BigFile.txt naga.txt</code></li>
-                <li><code>head fileName.txt</code>: Display the first lines of a file</li>
-                <li><code>less fileName.txt</code>:  View large files one page at a time</li>
-                <li>grep: Search text using patterns
+                <li>
+                    <code>cat filename</code> : Display file content
+                </li>
+                <li>
+                    <code>clear</code>: To clear the teriminal
+                </li>
+                <li>
+                    <code>tail fileName.txt</code>: Display the last lines of a file
+                </li>
+                <li>
+                    <code>tail -F BigFile.txt</code>
+                </li>
+                <li>
+                    <code>tail -n 4 BigFile.txt</code>
+                </li>
+                <li>
+                    <code>tail -4 BigFile.txt</code>
+                </li>
+                <li>
+                    <code>tail BigFile.txt naga.txt</code>
+                </li>
+                <li>
+                    <code>head fileName.txt</code>: Display the first lines of a file
+                </li>
+                <li>
+                    <code>less fileName.txt</code>:  View large files one page at a time
+                </li>
+                <li> grep: Search text using patterns
                     <ul>
-                        <li><code>grep "man" BigFile.txt</code></li>
-                        <li><code>grep "is " awk.txt</code></li>
+                        <li>
+                            <code>grep "man" BigFile.txt</code>
+                        </li>
+                        <li>
+                            <code>grep "is " awk.txt</code>
+                        </li>
                     </ul>
                 </li>
-                <li><b>sed </b>: Stream editor, used for searching, replacing text while displaying but not in the file content
+                <li><code>sed </code>: Stream editor, used for searching, replacing text while displaying but not in the file content
                     <ul>
-                        <li><code> sed 's/old/new/g' file.txt</code></li>
-                        <li><code> sed 's/gagan/gagana Sindhu/g' naga.txt</code></li>
+                        <li>
+                            <code> sed 's/old/new/g' file.txt</code>
+                        </li>
+                        <li>
+                            <code> sed 's/gagan/gagana Sindhu/g' naga.txt</code>
+                        </li>
                     </ul>
                 </li>
-                <li><b>awk </b>: Text processing and reporting
+                <li><code>awk </code>: Text processing and reporting
                     <ul>
                         <li>awk '{print $1}' naga.txt</li>
                         <li>awk '{print $1, $2}' awk.txt</li>
-                        <li><code> awk '{print $NF}' awk.txt</code></li>
+                        <li><code> awk '{print $NF}' awk.txt</code>
+                        </li>
                     </ul>
                 </li>
-                <li><b>history > history1.txt </b> : to print history content in history1 text file.</li>
+                <li><code>history > history1.txt </code> : To print history content in history1 text file.If history1.txt file does not exist it will create the page and print the content.</li>
+                <li><code>history >> history1.txt </code> :history content will append in history1.txt file. </li>
             </ol>
         </li>
         <li>Process Management
-            <ul>
+            <ol>
                 <li><code>ps</code>: To display list of processes</li>
                 <li><code>ps -ef | grep process_name </code>:  # Find a specific process.</li>
                 <li><code>top  </code>:# View system processes and resource usage</li>
@@ -147,10 +207,10 @@
                 </li>
                 <li><code>service </code>: Manage system services</li>
                 <li><code>service nginx restart</code></li>
-            </ul>
+            </ol>
         </li>
         <li>Networking commands
-            <ul>
+            <ol>
                 <li>ifconfig / ip: Configure network interfaces <code>ip address show</code> To show the Ip Address</li>
                 <li>ping : Check network connectivity . <code>ping google.com</code></li>
                 <li>`netstat` / `ss`: Network statistics and socket information . <code>ss -tuln</code></li>
@@ -168,17 +228,20 @@
                 <li>ssh : Securely connect to a remote system. <code> ssh user@server.com`</code></li>
                 <li>nmap : Network scanning and security auditing. <code> `nmap -sP 192.168.1.0/24`</code></li>
                 <li>wget: Download files from the web. <code>wget http://example.com/file.zip </code></li>
-            </ul>
+            </ol>
         </li>
         <li>Package Management
-            <ul>
+            <ol>
                 <li> apt update: Update the list of available packages. <code>sudo apt update</code></li>
                 <li>apt upgrade: Install the latest versions of all packages.. <code>sudo apt upgrade</code></li>
                 <li>apt install: Install a package <code>sudo apt install package_name</code></li>
                 <li> apt remove: Remove a package.
                 
                 <code>sudo apt remove package_name</code></li>
-            </ul>
+            </ol>
+        </li>
+        <li>
+            <ol></ol>
         </li>
     </ol>
 </body>
