@@ -205,8 +205,38 @@
                 <li><code>systemctl </code>: Start, stop, enable, or check status of services</li>
                 <li><code>systemctl start nginx</code></li>
                 </li>
+                <li><code>systemctl stop service_name
+                    </code></li>
+                    <li><code>
+                        systemctl restart service_name
+                    </code></li>
+                    <li><code>
+                        systemctl status service_name
+                    </code></li>
                 <li><code>service </code>: Manage system services</li>
                 <li><code>service nginx restart</code></li>
+            </ol>
+        </li>
+        <li>Shell Script and automation
+            <ol>
+                <li><code> #!/bin/bash</code>: Shebang line to specify the script interpreter </li>
+                <li>Variables: VAR_NAME="value"</li>
+                <li> Conditionals: if [ condition ]; then ... fi</li>
+                <li>oops: for i in {1..5}; do ... done</li>
+                <li>function
+                    <code>
+                        function my_function {
+                            echo "Hello"
+                        }
+                    </code>
+                </li>
+                <li><code>bash script.sh</code>: Start a new shell or run a script.</li>
+                <li>Crontab : Schedule jobs to run at specific times
+                    <ul>
+                        <li><code>Crontab -e</code>: Edit cron jobs </li>
+                        <li><code>0 0 * * * /path/to/script.sh </code>: Run script every day at midnight </li>
+                    </ul>
+                </li>
             </ol>
         </li>
         <li>User and Group Management
@@ -239,8 +269,20 @@
                 <li>traceroute : Show the path packets take to a network host
                     <code>traceroute google.com</code>
                 </li>
-                <li>scp : Securely copy files between servers <code>scp file.txt user@remote:/path/to/destination</code></li>
+                <li>scp : Securely copy files between servers 
+                    <ul>
+                        <li>
+                            <code>scp file.txt user@remote:/path/to/destination</code>
+                        </li>
+                        <li>
+                            <code>
+                                scp -r /local_dir user@remote_host:/remote_dir 
+                            </code> : copy directories
+                        </li>
+                    </ul>
+                    </li>
                 <li>ssh : Securely connect to a remote system. <code> ssh user@server.com</code></li>
+                <li><code>rsync -avz /local_path user@remote_host:/remote_path </code>. Sync files between local and remote systems.</li>
                 <li>nmap : Network scanning and security auditing. <code>nmap -sP 192.168.1.0/24</code></li>
                 <li>wget: Download files from the web. <code>wget http://example.com/file.zip </code></li>
             </ol>
@@ -253,6 +295,39 @@
                 <li> apt remove: Remove a package.
                 
                 <code>sudo apt remove package_name</code></li>
+            </ol>
+        </li>
+        <li>Archive and Compression
+            <ol>tar: Archive and compress files
+                <li>
+                    <code>tar -cvf archive.tar /path/to/files   
+                </code>: # Create an archive
+                </li>
+                <li>
+                    <code>tar -xvf archive.tar</code>: Extract
+                </li>
+                <li><code>tar -czvf archive.tar.gz /path       </code>:  # Create a compressed archive</li>
+            </ol>
+            <li><code> gzip file.txt </code>: Compress files.</li>
+        </li>
+        <li>Search And Filters
+            <ol>
+                <li><code>grep 'search-term' file.txt
+                    ps aux | grep nginx  # Find processes related to nginx </code>: Search for a pattern in files or output. </li>
+                <li><code>find /path -name "*.log" </code> :Search for files in a directory hierarchy.</li>
+                <li><code>locate filename</code>: Find files quickly using a pre-built index. </li>
+            </ol>
+        </li>
+        <li>System Monitoring
+            <ol>
+                <li>uptime: Show how long the system has been running. <code> uptime</code></li>
+                <li>free: Display memory usage . <code>free -h</code></li>
+                <li>vmstat: Report virtual memory statistics
+                    <code>
+                        vmstat 1  
+                    </code> :
+                    # Display memory, CPU, and I/O stats every second
+                </li>
             </ol>
         </li>
     </ol>
