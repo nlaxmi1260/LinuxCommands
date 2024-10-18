@@ -241,15 +241,27 @@
         </li>
         <li>User and Group Management
             <ol>
-                <li><code>useradd userName </code>:Add a new user. </li>
-                <li><code>passwd username</code> : Set or change a user's password.</li>
-                <li><code>userdel -r username</code>: Remove the user and their home directory </li>
+                <li><code>sudo </code>: Run commands as another user (usually root) <code>sudo apt update</code></li>
+                <li><code>users</code>: To see current users in linux machine.</li>
+                <li><code>sudo useradd userName </code>:Add a new user. </li>
+                <li><code>sudo passwd username</code> : Set or change a user's password.</li>
+                <li><code>cat /etc/passwd</code>: To see the list of users in the current machine</li>
+                <li><code>sudo userdel username</code>: Remove the user </li>
+                <li><code>sudo userdel -r username</code>: Remove the user and their home directory </li>
                 <li><code>groupadd groupName</code>: Create a new group.</li>
                 <li><code>usermod -aG groupName username </code>: Add user to a group.</li>
             </ol>
         </li>
         <li>Networking commands
             <ol>
+                <li>
+                    adding ip addresses in hosts file
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </li>
                 <li>ifconfig / ip: Configure network interfaces.
                     <ul>
                         <li> <code>ip address show</code>: To show the Ip Address.
@@ -288,12 +300,11 @@
             </ol>
         </li>
         <li>Package Management
-            <ol>
+            <ol>Debian/Ubuntu(APT)
                 <li> apt update: Update the list of available packages. <code>sudo apt update</code></li>
                 <li>apt upgrade: Install the latest versions of all packages.. <code>sudo apt upgrade</code></li>
                 <li>apt install: Install a package <code>sudo apt install package_name</code></li>
                 <li> apt remove: Remove a package.
-                
                 <code>sudo apt remove package_name</code></li>
             </ol>
         </li>
