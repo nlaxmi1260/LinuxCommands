@@ -220,10 +220,16 @@
         </li>
         <li>Networking commands
             <ol>
-                <li>ifconfig / ip: Configure network interfaces <code>ip address show</code> To show the Ip Address</li>
+                <li>ifconfig / ip: Configure network interfaces.
+                    <ul>
+                        <li> <code>ip address show</code>: To show the Ip Address.
+                        </li>
+                        <li><code>ifconfig </code>: Deprecated, but still used in older systems.</li>
+                    </ul> 
+                   </li>
                 <li>ping : Check network connectivity . <code>ping google.com</code></li>
-                <li>`netstat` / `ss`: Network statistics and socket information . <code>ss -tuln</code></li>
-                <li>`curl` / `wget`: Download files or interact with APIs . <code>curl http://example.com` </code>
+                <li>netstat / ss: Network statistics and socket information . <code>ss -tuln</code></li>
+                <li>curl / wget: Download files or interact with APIs . <code>curl http://example.com` </code>
                     <ul>
                         <li>curl http://example.com  # Fetch content of a webpage</li>
                         <li>curl -I http://example.com  # Fetch HTTP headers</li>
@@ -231,11 +237,11 @@
                 </li>
                 <li>nslookup : Query DNS information . <code>nslookup google.com</code></li>
                 <li>traceroute : Show the path packets take to a network host
-                    <code>raceroute google.com`</code>
+                    <code>traceroute google.com</code>
                 </li>
-                <li>scp : Securely copy files between servers <code>`scp file.txt user@remote:/path/to/destination` </code></li>
-                <li>ssh : Securely connect to a remote system. <code> ssh user@server.com`</code></li>
-                <li>nmap : Network scanning and security auditing. <code> `nmap -sP 192.168.1.0/24`</code></li>
+                <li>scp : Securely copy files between servers <code>scp file.txt user@remote:/path/to/destination</code></li>
+                <li>ssh : Securely connect to a remote system. <code> ssh user@server.com</code></li>
+                <li>nmap : Network scanning and security auditing. <code>nmap -sP 192.168.1.0/24</code></li>
                 <li>wget: Download files from the web. <code>wget http://example.com/file.zip </code></li>
             </ol>
         </li>
@@ -248,9 +254,6 @@
                 
                 <code>sudo apt remove package_name</code></li>
             </ol>
-        </li>
-        <li>
-            <ol></ol>
         </li>
     </ol>
 </body>
