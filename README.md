@@ -248,3 +248,17 @@ As a DevOps engineer, having a strong grasp of Linux commands is crucial for sys
      tail -n 10 file.txt  # Last 10 lines
      ```
    - **`awk`**:
+
+14. **Miscellaneous**
+- `crontab`: Schedule recurring tasks
+  - Example: `crontab -e` (edit cron jobs)
+- `alias`: Create shortcuts for commands
+  - Example: `alias ll='ls -la'`
+- `env`: Display environment variables
+- `history`: Show command history
+- `whoami`: Display current user
+- `hostname`: Display or set system hostname
+
+---
+
+These commands and tools form the backbone of the day-to-day tasks of a DevOps engineer, allowing you to manage infrastructure, automate deployments, troubleshoot issues, and maintain secure environments efficiently.
